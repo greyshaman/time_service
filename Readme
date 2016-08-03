@@ -1,0 +1,2 @@
+1. extract tz data  from cities15000.txt file to yaml file :
+echo "---" > cities_tz.yml; cat cities15000.txt | sed "s/'//g" | awk --field-separator '\t' '{print ($2":",$(NF-1))}' >> cities_tz.yml; echo "---" >> cities_tz.yml
